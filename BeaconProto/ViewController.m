@@ -8,17 +8,211 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+
+@interface ViewController (){
+    
+    CLLocationManager   *locationManager;
+    CLBeaconRegion      *beaconRegion;
+    NSUUID              *proximityUUID;
+    CBPeripheralManager *peripheralManager;
+    
+    BOOL beaconFlg;
+    NSString *lastMajorId;
+    
+    NSDictionary *msgDic;
+    NSDictionary *seDic;
+    
+}
 
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
+    
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    [self startLocationManager];
+    
 }
+
+
+////////////////////////////////////////////////////////////////////////
+
+#pragma mark -
+#pragma mark ビーコン関連
+
+//ビーコン受信開始
+- (void)startLocationManager{
+    
+    beaconFlg   = NO;
+    lastMajorId = @"";
+    
+    msgDic = @{@"major_7":@"Enter Beacon 7",@"major_49":@"Enter Beacon 49",@"major_343":@"Enter Beacon 343",@"major_2401":@"Enter Beacon 2401"};
+    
+    
+    proximityUUID = [[NSUUID alloc] initWithUUIDString:@"552FD535-F9D6-4B23-B862-CB4BACEA02DE"];
+    
+    
+    //ビーコン受信設定
+    if ([CLLocationManager isMonitoringAvailableForClass:[CLBeaconRegion class]]) {
+        
+        //デリゲートを設定
+        locationManager          = [CLLocationManager new];
+        locationManager.delegate = self;
+        
+        //CLBeaconRegionを作成
+        beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:proximityUUID identifier:@"jp.gtlab.BeaconProto"];
+        beaconRegion.notifyEntryStateOnDisplay = YES;
+        
+        //モニタリング開始
+        [locationManager startMonitoringForRegion:beaconRegion];
+        
+    }
+    
+}
+
+
+//モニタリング開始
+- (void)locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region{
+    
+    NSLog(@"didStartMonitoringForRegion:");
+    [locationManager requestStateForRegion:beaconRegion];
+    
+}
+
+
+//ステータスの監視
+- (void)locationManager:(CLLocationManager *)manager didDetermineState:(CLRegionState)state forRegion:(CLRegion *)region{
+    
+    NSLog(@"didDetermineState:");
+    
+    switch (state) {
+        case CLRegionStateInside:
+            NSLog(@"CLRegionStateInside");
+            if ([region isMemberOfClass:[CLBeaconRegion class]] && [CLLocationManager isRangingAvailable]) {
+                [locationManager startRangingBeaconsInRegion:beaconRegion];
+            }
+            break;
+        case CLRegionStateOutside:
+        case CLRegionStateUnknown:
+        default:
+            NSLog(@"BREAK!!");
+            break;
+    }
+    
+}
+
+
+//境界に入った瞬間の処理
+- (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region{
+    
+    beaconFlg   = YES;
+    lastMajorId = @"";
+    
+    //なにか通知するのであれば
+    //[self sendLocalNotificationRequest:@{@"mode":@"enter",@"range":@"0",@"major":@"0",@"minor":@"0"}];
+    
+    if ([region isMemberOfClass:[CLBeaconRegion class]] && [CLLocationManager isRangingAvailable]) {
+        [locationManager startRangingBeaconsInRegion:(CLBeaconRegion *)region];
+    }
+    
+}
+
+
+//境界から出た瞬間の処理
+- (void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region{
+    
+    beaconFlg   = NO;
+    lastMajorId = @"";
+    
+    //なにか通知するのであれば
+    //[self sendLocalNotificationRequest:@{@"mode":@"exit",@"range":@"0",@"major":@"0",@"minor":@"0"}];
+    
+    if ([region isMemberOfClass:[CLBeaconRegion class]] && [CLLocationManager isRangingAvailable]) {
+        [locationManager startRangingBeaconsInRegion:(CLBeaconRegion *)region];
+    }
+    
+}
+
+
+//受信している各ビーコンとの距離を測定する
+- (void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region{
+    
+    if ([beacons count] < 1) {
+        return;
+    }
+    
+    //一番近いビーコン情報を取得する
+    //同時に受信しているビーコンは配列beaconsに入っている
+    CLBeacon *firstBeacon = beacons.firstObject;
+    NSString *major       = [NSString stringWithFormat:@"%@",firstBeacon.major];
+    NSString *minor       = [NSString stringWithFormat:@"%@",firstBeacon.minor];
+    
+    //1だと近い、3だと遠い
+    int range = firstBeacon.proximity;
+    
+    //同じMajorなら通知しない
+    if ([lastMajorId intValue] == [major intValue]) {
+        return;
+    }
+    
+    lastMajorId = major;
+    
+    
+    //ローカル通知
+    [self sendLocalNotificationRequest:@{@"mode":@"range",@"range":[NSString stringWithFormat:@"%d",range],@"major":major,@"minor":minor}];
+    
+}
+
+
+//ローカル通知処理
+- (void)sendLocalNotificationRequest:(NSDictionary *)items{
+    
+    NSString *mode  = [items objectForKey:@"mode"];
+    
+    int range = [[items objectForKey:@"range"] intValue];
+    int major = [[items objectForKey:@"major"] intValue];
+    int minor = [[items objectForKey:@"minor"] intValue];
+    
+    
+    UILocalNotification *localNotification = [UILocalNotification new];
+    
+    localNotification.fireDate = [NSDate date];
+    localNotification.soundName = UILocalNotificationDefaultSoundName;
+    
+    
+    //境界に入った時の処理
+    if ([mode isEqualToString:@"enter"]) {
+        
+        localNotification.alertBody = @"Mode : Enter";
+        
+    //境界から出た時の処理
+    }else if ([mode isEqualToString:@"exit"]) {
+        
+        localNotification.alertBody = @"Mode : Exit";
+        
+    //距離測定時
+    }else if ([mode isEqualToString:@"range"]) {
+        
+        localNotification.alertBody = [msgDic objectForKey:[NSString stringWithFormat:@"major_%d", major]];
+        localNotification.soundName = [NSString stringWithFormat:@"se_%d.wav", major];
+        
+    }
+    
+    
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+    
+    
+    //画面にも出力
+    NSString *nowMsg = [NSString stringWithFormat:@"Mode : %@ / Major : %d / Range : %d", mode, major, range];
+    
+    _textView.text = [NSString stringWithFormat:@"%@\r%@", nowMsg, _textView.text];
+    
+}
+
+
+
+
 
 - (void)didReceiveMemoryWarning
 {

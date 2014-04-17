@@ -21,6 +21,12 @@
 		D299293F18FF6CCA00287521 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D299292118FF6CCA00287521 /* UIKit.framework */; };
 		D299294718FF6CCA00287521 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D299294518FF6CCA00287521 /* InfoPlist.strings */; };
 		D299294918FF6CCA00287521 /* BeaconProtoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D299294818FF6CCA00287521 /* BeaconProtoTests.m */; };
+		D299295318FF6D5800287521 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D299295218FF6D5800287521 /* CoreBluetooth.framework */; };
+		D299295518FF6D6300287521 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D299295418FF6D6300287521 /* CoreLocation.framework */; };
+		D299295A18FF816100287521 /* se_7.wav in Resources */ = {isa = PBXBuildFile; fileRef = D299295618FF816100287521 /* se_7.wav */; };
+		D299295B18FF816100287521 /* se_49.wav in Resources */ = {isa = PBXBuildFile; fileRef = D299295718FF816100287521 /* se_49.wav */; };
+		D299295C18FF816100287521 /* se_343.wav in Resources */ = {isa = PBXBuildFile; fileRef = D299295818FF816100287521 /* se_343.wav */; };
+		D299295D18FF816100287521 /* se_2401.wav in Resources */ = {isa = PBXBuildFile; fileRef = D299295918FF816100287521 /* se_2401.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +59,12 @@
 		D299294418FF6CCA00287521 /* BeaconProtoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BeaconProtoTests-Info.plist"; sourceTree = "<group>"; };
 		D299294618FF6CCA00287521 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D299294818FF6CCA00287521 /* BeaconProtoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeaconProtoTests.m; sourceTree = "<group>"; };
+		D299295218FF6D5800287521 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		D299295418FF6D6300287521 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D299295618FF816100287521 /* se_7.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = se_7.wav; sourceTree = "<group>"; };
+		D299295718FF816100287521 /* se_49.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = se_49.wav; sourceTree = "<group>"; };
+		D299295818FF816100287521 /* se_343.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = se_343.wav; sourceTree = "<group>"; };
+		D299295918FF816100287521 /* se_2401.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = se_2401.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +72,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D299295518FF6D6300287521 /* CoreLocation.framework in Frameworks */,
+				D299295318FF6D5800287521 /* CoreBluetooth.framework in Frameworks */,
 				D299292018FF6CCA00287521 /* CoreGraphics.framework in Frameworks */,
 				D299292218FF6CCA00287521 /* UIKit.framework in Frameworks */,
 				D299291E18FF6CCA00287521 /* Foundation.framework in Frameworks */,
@@ -101,6 +115,8 @@
 		D299291C18FF6CCA00287521 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D299295418FF6D6300287521 /* CoreLocation.framework */,
+				D299295218FF6D5800287521 /* CoreBluetooth.framework */,
 				D299291D18FF6CCA00287521 /* Foundation.framework */,
 				D299291F18FF6CCA00287521 /* CoreGraphics.framework */,
 				D299292118FF6CCA00287521 /* UIKit.framework */,
@@ -126,6 +142,10 @@
 		D299292418FF6CCA00287521 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D299295618FF816100287521 /* se_7.wav */,
+				D299295718FF816100287521 /* se_49.wav */,
+				D299295818FF816100287521 /* se_343.wav */,
+				D299295918FF816100287521 /* se_2401.wav */,
 				D299292518FF6CCA00287521 /* BeaconProto-Info.plist */,
 				D299292618FF6CCA00287521 /* InfoPlist.strings */,
 				D299292918FF6CCA00287521 /* main.m */,
@@ -229,8 +249,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D299293618FF6CCA00287521 /* Images.xcassets in Resources */,
+				D299295B18FF816100287521 /* se_49.wav in Resources */,
 				D299292818FF6CCA00287521 /* InfoPlist.strings in Resources */,
+				D299295A18FF816100287521 /* se_7.wav in Resources */,
 				D299293118FF6CCA00287521 /* Main.storyboard in Resources */,
+				D299295D18FF816100287521 /* se_2401.wav in Resources */,
+				D299295C18FF816100287521 /* se_343.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
