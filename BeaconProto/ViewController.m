@@ -67,6 +67,8 @@
         //モニタリング開始
         [locationManager startMonitoringForRegion:beaconRegion];
         
+    } else {
+        NSLog(@"お使いの端末ではiBeaconを利用できません。");
     }
     
 }
