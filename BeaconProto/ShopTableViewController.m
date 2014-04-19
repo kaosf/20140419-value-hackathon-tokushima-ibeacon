@@ -59,19 +59,19 @@
     
     switch(indexPath.row) {
         case 0:
-            cell.textLabel.text = @"Ｉｒｉｓｈ　Ｐｕｂ　ＧＡＬＷＡＹ";
+            cell.textLabel.text = @"Irish Pub GALWAY";
             break;
         case 1:
-            cell.textLabel.text = @"京王プラザホテル";
+            cell.textLabel.text = @"Keio Plaza Hotel";
             break;
         case 2:
-            cell.textLabel.text = @"小堀栄養納豆店";
+            cell.textLabel.text = @"Kobori nutrition natto shop";
             break;
         case 3:
-            cell.textLabel.text = @"高尾山とろろそば";
+            cell.textLabel.text = @"Takao grated yam soba";
             break;
         case 4:
-            cell.textLabel.text = @"八王子ラーメン";
+            cell.textLabel.text = @"Hachioji ramen";
             break;
     }
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;

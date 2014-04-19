@@ -220,6 +220,9 @@
         case 343:
             _textView.text = @"Was cheers for good work. There are benefits and Deals shop recommended. Why do not you go after this?";
             break;
+        case 2401:
+            _textView.text = @"Get Beer!!Please show it to the clerk.";
+            break;
 
     
     }
