@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F2ADD8E19020E4500870D69 /* course1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4F2ADD8D19020E4500870D69 /* course1.jpg */; };
+		4F2ADD9119020FEB00870D69 /* LanguageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2ADD9019020FEB00870D69 /* LanguageTableViewController.m */; };
+		4F2ADD93190211F800870D69 /* DSC06899.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4F2ADD92190211F800870D69 /* DSC06899.jpg */; };
+		4F2ADD96190213C000870D69 /* ShopTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2ADD95190213C000870D69 /* ShopTableViewController.m */; };
+		4F2ADD98190214D100870D69 /* 1860_j4227_menu2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4F2ADD97190214D100870D69 /* 1860_j4227_menu2.jpg */; };
+		4F2ADD9A1902151600870D69 /* static.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F2ADD991902151600870D69 /* static.png */; };
 		D299291E18FF6CCA00287521 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D299291D18FF6CCA00287521 /* Foundation.framework */; };
 		D299292018FF6CCA00287521 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D299291F18FF6CCA00287521 /* CoreGraphics.framework */; };
 		D299292218FF6CCA00287521 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D299292118FF6CCA00287521 /* UIKit.framework */; };
@@ -40,6 +46,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F2ADD8D19020E4500870D69 /* course1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = course1.jpg; sourceTree = "<group>"; };
+		4F2ADD8F19020FEB00870D69 /* LanguageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageTableViewController.h; sourceTree = "<group>"; };
+		4F2ADD9019020FEB00870D69 /* LanguageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageTableViewController.m; sourceTree = "<group>"; };
+		4F2ADD92190211F800870D69 /* DSC06899.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DSC06899.jpg; sourceTree = "<group>"; };
+		4F2ADD94190213C000870D69 /* ShopTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopTableViewController.h; sourceTree = "<group>"; };
+		4F2ADD95190213C000870D69 /* ShopTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopTableViewController.m; sourceTree = "<group>"; };
+		4F2ADD97190214D100870D69 /* 1860_j4227_menu2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1860_j4227_menu2.jpg; sourceTree = "<group>"; };
+		4F2ADD991902151600870D69 /* static.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = static.png; sourceTree = "<group>"; };
 		D299291A18FF6CCA00287521 /* BeaconProto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaconProto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D299291D18FF6CCA00287521 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D299291F18FF6CCA00287521 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -133,6 +147,10 @@
 				D299292F18FF6CCA00287521 /* Main.storyboard */,
 				D299293218FF6CCA00287521 /* ViewController.h */,
 				D299293318FF6CCA00287521 /* ViewController.m */,
+				4F2ADD8F19020FEB00870D69 /* LanguageTableViewController.h */,
+				4F2ADD9019020FEB00870D69 /* LanguageTableViewController.m */,
+				4F2ADD94190213C000870D69 /* ShopTableViewController.h */,
+				4F2ADD95190213C000870D69 /* ShopTableViewController.m */,
 				D299293518FF6CCA00287521 /* Images.xcassets */,
 				D299292418FF6CCA00287521 /* Supporting Files */,
 			);
@@ -142,6 +160,10 @@
 		D299292418FF6CCA00287521 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4F2ADD991902151600870D69 /* static.png */,
+				4F2ADD97190214D100870D69 /* 1860_j4227_menu2.jpg */,
+				4F2ADD92190211F800870D69 /* DSC06899.jpg */,
+				4F2ADD8D19020E4500870D69 /* course1.jpg */,
 				D299295618FF816100287521 /* se_7.wav */,
 				D299295718FF816100287521 /* se_49.wav */,
 				D299295818FF816100287521 /* se_343.wav */,
@@ -250,8 +272,12 @@
 			files = (
 				D299293618FF6CCA00287521 /* Images.xcassets in Resources */,
 				D299295B18FF816100287521 /* se_49.wav in Resources */,
+				4F2ADD9A1902151600870D69 /* static.png in Resources */,
+				4F2ADD98190214D100870D69 /* 1860_j4227_menu2.jpg in Resources */,
 				D299292818FF6CCA00287521 /* InfoPlist.strings in Resources */,
 				D299295A18FF816100287521 /* se_7.wav in Resources */,
+				4F2ADD8E19020E4500870D69 /* course1.jpg in Resources */,
+				4F2ADD93190211F800870D69 /* DSC06899.jpg in Resources */,
 				D299293118FF6CCA00287521 /* Main.storyboard in Resources */,
 				D299295D18FF816100287521 /* se_2401.wav in Resources */,
 				D299295C18FF816100287521 /* se_343.wav in Resources */,
@@ -275,7 +301,9 @@
 			files = (
 				D299293418FF6CCA00287521 /* ViewController.m in Sources */,
 				D299292E18FF6CCA00287521 /* AppDelegate.m in Sources */,
+				4F2ADD96190213C000870D69 /* ShopTableViewController.m in Sources */,
 				D299292A18FF6CCA00287521 /* main.m in Sources */,
+				4F2ADD9119020FEB00870D69 /* LanguageTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,7 +357,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -361,6 +389,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -368,7 +397,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -394,6 +423,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Release;
 		};
@@ -426,7 +456,6 @@
 		D299295018FF6CCA00287521 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BeaconProto.app/BeaconProto";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -449,7 +478,6 @@
 		D299295118FF6CCA00287521 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BeaconProto.app/BeaconProto";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -484,6 +512,7 @@
 				D299294E18FF6CCA00287521 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D299294F18FF6CCA00287521 /* Build configuration list for PBXNativeTarget "BeaconProtoTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +521,7 @@
 				D299295118FF6CCA00287521 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
