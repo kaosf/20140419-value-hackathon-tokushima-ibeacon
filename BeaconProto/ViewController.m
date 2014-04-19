@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import <AVFoundation/AVFoundation.h>
 
 @interface ViewController (){
     
@@ -21,6 +21,7 @@
     
     NSDictionary *msgDic;
     NSDictionary *seDic;
+    AVAudioPlayer* avap;
     
 }
 
@@ -32,7 +33,6 @@
     
     [super viewDidLoad];
     [self startLocationManager];
-    
 }
 
 
@@ -205,11 +205,34 @@
     [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
     
     
+    NSLog(@"Mode : %@ / Major : %d / Range : %d", mode, major, range);
     //画面にも出力
-    NSString *nowMsg = [NSString stringWithFormat:@"Mode : %@ / Major : %d / Range : %d", mode, major, range];
+    bool voice = false;
+    switch( major ) {
+        case 7:
+            _textView.text = @"This is the azalea.Because Takao Unlike the artificial forest of peripheral, natural forest remains widely, many trees are lush and dense but very 599 meters above sea level.Under these wonderful environment, through the four seasons, and wild birds, insects, animals will inhabit many.";
+            voice = true;
+            break;
+        case 49:
+            _textView.text = @"You will arrive to Yakuoin and walk about 10 minutes to go the way of the left.";
+            voice = true;
+            break;
+        case 343:
+            _textView.text = @"Was cheers for good work. There are benefits and Deals shop recommended. Why do not you go after this?";
+            break;
+
     
-    _textView.text = [NSString stringWithFormat:@"%@\r%@", nowMsg, _textView.text];
+    }
     
+    
+    // 音声案内
+    if( voice ) {
+        NSBundle* bundle = [NSBundle mainBundle];
+        NSString* path = [bundle pathForResource:[NSString stringWithFormat:@"voice_%d", major] ofType:@"m4a"];
+        NSURL* url = [NSURL fileURLWithPath:path];
+        avap = [ [AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+        [avap play];
+    }
 }
 
 
