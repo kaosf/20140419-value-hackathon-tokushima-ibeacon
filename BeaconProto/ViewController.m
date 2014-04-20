@@ -33,6 +33,8 @@
     
     [super viewDidLoad];
     [self startLocationManager];
+    
+    _beerImage.hidden = YES;
 }
 
 
@@ -210,18 +212,20 @@
     bool voice = false;
     switch( major ) {
         case 7:
-            _textView.text = @"This is the azalea.Because Takao Unlike the artificial forest of peripheral, natural forest remains widely, many trees are lush and dense but very 599 meters above sea level.Under these wonderful environment, through the four seasons, and wild birds, insects, animals will inhabit many.";
+            [_textView setText:@"This is the azalea.Because Takao Unlike the artificial forest of peripheral, natural forest remains widely, many trees are lush and dense but very 599 meters above sea level.Under these wonderful environment, through the four seasons, and wild birds, insects, animals will inhabit many."];
             voice = true;
             break;
         case 49:
-            _textView.text = @"You will arrive to Yakuoin and walk about 10 minutes to go the way of the left.";
+            [_textView setText:@"You will arrive to Yakuoin and walk about 10 minutes to go the way of the left."];
             voice = true;
             break;
         case 343:
-            _textView.text = @"Was cheers for good work. There are benefits and Deals shop recommended. Why do not you go after this?";
+            [_textView setText:@"Was cheers for good work. There are benefits and Deals shop recommended. Why do not you go after this?"];
             break;
         case 2401:
-            _textView.text = @"Get Beer!!Please show it to the clerk.";
+            [_textView setText:@"Get Beer!!Please show it to the clerk."];
+            voice = true;
+            _beerImage.hidden = NO;
             break;
 
     

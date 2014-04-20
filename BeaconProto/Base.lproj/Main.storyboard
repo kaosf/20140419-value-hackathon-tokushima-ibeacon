@@ -100,8 +100,8 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Medium-full mug gift" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="uCe-4W-U9s">
                                 <rect key="frame" x="0.0" y="376" width="320" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.047118742970000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="static.png" translatesAutoresizingMaskIntoConstraints="NO" id="6Zv-rY-lbR">
@@ -112,15 +112,20 @@
                                 <rect key="frame" x="0.0" y="459" width="320" height="67"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.047118742969354699" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="beer-jock-L.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="NNQ-Je-73d">
+                                <rect key="frame" x="40" y="396" width="240" height="137"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="seY-QA-RFT"/>
                     <connections>
+                        <outlet property="beerImage" destination="NNQ-Je-73d" id="8a3-zV-BFX"/>
                         <outlet property="textView" destination="Faj-WL-T5b" id="Rju-Wi-Rfx"/>
                     </connections>
                 </viewController>
@@ -230,6 +235,7 @@ Information flows</string>
     <resources>
         <image name="1860_j4227_menu2.jpg" width="600" height="450"/>
         <image name="DSC06899.jpg" width="480" height="319"/>
+        <image name="beer-jock-L.jpg" width="480" height="320"/>
         <image name="course1.jpg" width="700" height="620"/>
         <image name="static.png" width="612" height="180"/>
     </resources>

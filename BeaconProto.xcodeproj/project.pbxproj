@@ -15,6 +15,8 @@
 		4F2ADD9A1902151600870D69 /* static.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F2ADD991902151600870D69 /* static.png */; };
 		4F2ADD9D1902400200870D69 /* voice_7.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4F2ADD9B19022C7100870D69 /* voice_7.m4a */; };
 		4F2ADD9F190244D600870D69 /* voice_49.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4F2ADD9E190244D600870D69 /* voice_49.m4a */; };
+		4F2ADDA11903974100870D69 /* beer-jock-L.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4F2ADDA01903974100870D69 /* beer-jock-L.jpg */; };
+		4FA685DA1903985400CB1D13 /* voice_2401.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4FA685D91903985400CB1D13 /* voice_2401.m4a */; };
 		D299291E18FF6CCA00287521 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D299291D18FF6CCA00287521 /* Foundation.framework */; };
 		D299292018FF6CCA00287521 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D299291F18FF6CCA00287521 /* CoreGraphics.framework */; };
 		D299292218FF6CCA00287521 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D299292118FF6CCA00287521 /* UIKit.framework */; };
@@ -58,6 +60,8 @@
 		4F2ADD991902151600870D69 /* static.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = static.png; sourceTree = "<group>"; };
 		4F2ADD9B19022C7100870D69 /* voice_7.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = voice_7.m4a; sourceTree = "<group>"; };
 		4F2ADD9E190244D600870D69 /* voice_49.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = voice_49.m4a; sourceTree = "<group>"; };
+		4F2ADDA01903974100870D69 /* beer-jock-L.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "beer-jock-L.jpg"; sourceTree = "<group>"; };
+		4FA685D91903985400CB1D13 /* voice_2401.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = voice_2401.m4a; sourceTree = "<group>"; };
 		D299291A18FF6CCA00287521 /* BeaconProto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaconProto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D299291D18FF6CCA00287521 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D299291F18FF6CCA00287521 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -114,6 +118,7 @@
 		4F2ADD9C19023C2800870D69 /* sound */ = {
 			isa = PBXGroup;
 			children = (
+				4FA685D91903985400CB1D13 /* voice_2401.m4a */,
 				4F2ADD9E190244D600870D69 /* voice_49.m4a */,
 				4F2ADD9B19022C7100870D69 /* voice_7.m4a */,
 				D299295618FF816100287521 /* se_7.wav */,
@@ -177,6 +182,7 @@
 		D299292418FF6CCA00287521 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4F2ADDA01903974100870D69 /* beer-jock-L.jpg */,
 				4F2ADD9C19023C2800870D69 /* sound */,
 				4F2ADD991902151600870D69 /* static.png */,
 				4F2ADD97190214D100870D69 /* 1860_j4227_menu2.jpg */,
@@ -288,7 +294,9 @@
 				D299295B18FF816100287521 /* se_49.wav in Resources */,
 				4F2ADD9A1902151600870D69 /* static.png in Resources */,
 				4F2ADD98190214D100870D69 /* 1860_j4227_menu2.jpg in Resources */,
+				4FA685DA1903985400CB1D13 /* voice_2401.m4a in Resources */,
 				D299292818FF6CCA00287521 /* InfoPlist.strings in Resources */,
+				4F2ADDA11903974100870D69 /* beer-jock-L.jpg in Resources */,
 				D299295A18FF816100287521 /* se_7.wav in Resources */,
 				4F2ADD8E19020E4500870D69 /* course1.jpg in Resources */,
 				4F2ADD9F190244D600870D69 /* voice_49.m4a in Resources */,
